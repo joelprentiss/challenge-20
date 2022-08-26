@@ -60,6 +60,11 @@ function Contact(){
         />
         <button type='button' onClick={handleFormSubmit}>Send</button>
       </form>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
     </div>
   )
 }
