@@ -5,11 +5,10 @@ import About from './pages/about';
 import Resume from './pages/resume';
 import Contact from './pages/contact';
 
-export default function PortfolioContainer() {
+export default function MainContainer() {
   const [currentPage, setCurrentPage] = useState('home');
 
-  // TODO: Add a comment describing the functionality of this method; renders whatever page to render that is selected
-  const renderPage = () => {
+   const renderPage = () => {
     if (currentPage === 'home') {
       return <Home />;
     }
@@ -19,17 +18,17 @@ export default function PortfolioContainer() {
     if (currentPage === 'resume') {
       return <Resume />;
     }
-    return <Contact />;
+    if(currentPage === 'contact'){
+      return <Contact/>
+    }
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div>
-      {/* // TODO: Add a comment describing what we are passing as props, nav tabs set the pages to render */}
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* // TODO: Add a comment explaining what is happening on the following line, render page function is called */}
-      {renderPage()}
+            <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+            {renderPage()}
     </div>
   );
 }
