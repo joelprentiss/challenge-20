@@ -1,7 +1,21 @@
-// import React from 'react';
+import React from 'react';
+import NavTabs from './components/navbar'; 
+import About from './components/pages/about';
+import Home from './components/pages/home';
+import Contact from './components/pages/contact';
 
-// function App() {
-//     return </>;
-//   }
+function App() {
+    return (
+      <div className='nav-tabs'>
+        <NavTabs/>
+        <About/>
+        <Home/>
+        <Contact/>
 
-  // export default App;
+      
+
+      </div>
+    )
+  }
+
+  export default App;
