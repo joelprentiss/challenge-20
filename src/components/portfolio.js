@@ -4,6 +4,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Resume from './pages/resume';
 import Contact from './pages/contact';
+import '../css/styles.css'
 
 export default function MainContainer() {
   const [currentPage, setCurrentPage] = useState('home');

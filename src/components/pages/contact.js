@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {validateEmail} from '../portfolio';
-
+import '../../css/styles.css';
 
 function Contact(){
   const [email, setEmail] = useState('');
