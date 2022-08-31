@@ -32,19 +32,20 @@ function Contact(){
     setSubject('');
   };
   return(
-    <div>
-      <p>Hello! You can use this form to contact me!</p>
-      <form className='form' method='POST' action='https://script.google.com/macros/s/AKfycbwwaxTnYYmf7m9ALRjwP7WB1Wu2dfTV66uQjXr_iYOKKstaDzXUUQMGisH17tWJL-2lbw/exec
-'>
+    <div class="container">
+      <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Hello! You can use this form to contact me!</h3>
+      <form id="contactForm" method='POST' action='https://script.google.com/macros/s/AKfycbwwaxTnYYmf7m9ALRjwP7WB1Wu2dfTV66uQjXr_iYOKKstaDzXUUQMGisH17tWJL-2lbw/exec'>
         <input
+        class="form-floating mb-3"
         value={email}
-        name='Email'
+        name='email'
         onChange ={handleInputChange}
         type='email'
-        placeholder ='Email'
+        placeholder ='email'
         />
-        <input name="Name" type="text" placeholder="Name" required />
+        <input class="form-floating mb-3" name="Name" type="text" placeholder="Name" required />
         <input
+        class="form-floating mb-3"
         value={messageSubject}
         name='messageSubject'
         onChange={handleInputChange}
@@ -52,6 +53,7 @@ function Contact(){
         placeholder='Message Subject'
         />
         <input
+        class="form-floating mb-3"
         value={messageBody}
         name='messageBody'
         onChange={handleInputChange}
